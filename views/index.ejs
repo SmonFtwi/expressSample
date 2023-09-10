@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            padding:1vh 2vh;
+            border: 1px black solid;
+            border-radius: 10px;
+
+        }
+        a{
+            text-decoration: none;
+            font-size: medium;
+        }
+    </style>
+    <title>Chat App</title>
+</head>
+<body>
+    <h1>Chat Here</h1>
+    <ul>
+        <% messages.forEach(message => { %>
+            <li><strong><%= message.user %>:</strong> <%= message.text %> - <%= message.added %></li>
+        <% }); %>
+    </ul>
+    <button><a href="/messagebox">Add new message</a> </button>
+</body>
+</html>

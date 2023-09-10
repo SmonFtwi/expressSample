@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>message</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        form{
+            margin-top: 5vh;
+            padding: 2vh;
+            display: flex;
+            flex-direction: column;
+            width:30vw;
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+            
+        }
+        form input {
+
+            margin: 1vh;
+            border-radius: 5px;
+            height: 3vh;
+        }
+        form :nth-child(1){
+            height: 10vh;
+        }
+        button{
+            margin-top: 2vh;
+            margin-left: 1vh;
+            width: 15vh;
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 1vh;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="/messagebox">
+        <input 
+        name = text
+        placeholder="write your message"
+        required
+      
+        >
+        <input 
+        name = user
+        placeholder="your name"
+        required
+        
+        >
+        <button>Send</button>
+     </form>
+</body>
+</html>
